@@ -5,6 +5,7 @@ paginate: 3
 permalink: /:title
 paginate_path: "/weblog/page:num/"
 
-
 plugins:
   - jekyll-paginate
+
+include: ['_pages']

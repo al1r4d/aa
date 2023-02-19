@@ -11,7 +11,7 @@
       {% elsif page == 1 %}
         <a class="page-number" href="{{ '/' | prepend: site.baseurl }}">{{ page }}</a>
       {% else %}
-        <a class="page-number" href="{{ '/page' | append: page | prepend: site.baseurl }}">{{ page }}</a>
+        <a class="page-number" href="{{ '/weblog/page' | append: page | prepend: site.baseurl }}">{{ page }}</a>
       {% endif %}
     {% endfor %}
     {% if paginator.next_page %}

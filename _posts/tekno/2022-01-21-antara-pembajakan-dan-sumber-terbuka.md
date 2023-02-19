@@ -1,6 +1,6 @@
 ---
 title	: Antara Pembajakan dan Sumber Terbuka
-layout	: post
+layout	: post-catatan
 tag	:
 - teknologi
 ---

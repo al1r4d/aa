@@ -1,6 +1,6 @@
 ---
 title: Komentar Bom Bunuh Diri Astana Anyar
-tag: komentar
+categories: komentar
 layout: post
 ---
 Pagi - pagi dapat kabar ada bom bunuh diri di Astana Anyar, tepat 1 hari setelah pengesahan rkuhp ~~kolonial~~ terbaru. 

@@ -105,17 +105,29 @@ header {
   margin: 0 auto;
 }
 
+.avatar {
+    margin: 0 0 1em 1em;
+    max-width: 125px;
+    border-radius: 2px;
+    @include mobile { max-width: 100px; }
+}
 
+.left { float: left; }
+.right { float: right; }
 
 @media only screen and (max-width: 768px) {
+.pin { 
+	 max-width: 86%;
+  max-height: 85%;
+  }
 
 .container {
     flex-direction: flex;
   }
 
   .main {
-    border-right: 1px solid #fff
-	  flex-basis: 100%;
+    border-right: 1px solid #fff;
+    width: 65%;
     margin-right: 0;
   }
 

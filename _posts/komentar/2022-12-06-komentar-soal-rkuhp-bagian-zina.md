@@ -1,7 +1,7 @@
 ---
 title: Komentar RKUHP Bagian Zina
 layout: post
-tag: komentar
+categories: komentar
 ---
 
 Kali ini timeline Mastodon & Twitter lagi ramai soal RKUHP terbaru. Jujur aja gw belum baca sampai selesai.
