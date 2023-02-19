@@ -12,4 +12,4 @@ feed:
 plugins:
   - jekyll-paginate
   - jekyll-feed
-include: ['_pages']
+include: ['_pages', '_includes', '_layout' ]
