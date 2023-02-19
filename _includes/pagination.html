@@ -5,7 +5,7 @@
     {% else %}
       <span class="previous">← Prev</span>
     {% endif %}
-    {% for page in (1..paginator.total_pages) %}
+   <!-- {% for page in (1..paginator.total_pages) %}
       {% if page == paginator.page %}
         <span class="page-number current">{{ page }}</span>
       {% elsif page == 1 %}
@@ -13,7 +13,7 @@
       {% else %}
         <a class="page-number" href="{{ '/weblog/page' | append: page | prepend: site.baseurl }}">{{ page }}</a>
       {% endif %}
-    {% endfor %}
+      {% endfor %} --!>
     {% if paginator.next_page %}
       <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next →</a>
     {% else %}
