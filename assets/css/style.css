@@ -1,17 +1,26 @@
 body {
 	background-color: #303030;
-	font-family: "Liberation Sans-Serif", sans-serif;
+	font-family: "Liberation Sans", sans-serif;
 }
 header {
 	width: 100%;
 }
 
+.thumbnail {
+	max-width: 40%;
+	max-height: 40%;
+	display: block;
+margin-left: auto;
+margin-right: auto;
+}
 img {
 	max-width: 200px;
 }
   .main {
-   flex-basis: 100%;
-    margin-right: 0;
+  
+     width: 95%;
+  margin: 0 auto;
+    
   }
 .header-kedua {
 	display: block;
@@ -25,8 +34,7 @@ img {
 }
 
 .container {
- border-right: 1px solid #fff; 
-
+ 
 	display: flex;
   background-color: #d0d0d0;
   padding: 1px;
@@ -124,19 +132,25 @@ img {
 .right { float: right; }
 
 @media only screen and (max-width: 768px) {
-.pin { 
+
+.thumbnail {
+	max-width: 100%;
+	  display: block;
+	    margin-left: auto;
+	      margin-right: auto;
+      }
+	.pin { 
 	 max-width: 86%;
   max-height: 85%;
   }
 
 .container {
     flex-direction: flex;
-    border-right: 1px solid #fff;
+   
      box-sizing: border-box;
   }
 
   .main {
-    max-width: 200px;
     margin: 0 auto;
  box-sizing: border-box; 
   }

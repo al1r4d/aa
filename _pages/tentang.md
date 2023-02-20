@@ -54,9 +54,8 @@ Jika suatu sebab saya telah tiada, siapapun anda, hidupkan blog ini dengan fork 
 ## Kode Sumber
 Blog ini bersifat _free open source software_. Jika ingin membuat blog yang sama, silahkan unduh filenya.
 ```
-$ git clone https://github.com/al1r4d/hm
-$ cd hm
-$ git checkout master
+$ git clone https://github.com/al1r4d/aa
+$ cd aa
 ```
 
 

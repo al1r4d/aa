@@ -8,7 +8,10 @@
     <div class="main">
             {{ content }}
     </div>
+        {% if page.layout == 'default' %}
     {% include sidebar.html %}
+        {% else %}
+	{% endif %}
   </main>
   {% include footer.html %}
 </body>
