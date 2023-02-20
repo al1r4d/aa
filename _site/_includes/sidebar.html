@@ -1,0 +1,21 @@
+<div class="sidebar">
+	<div class="pin">
+		{% include pin.html %}
+		<div>
+			<p><b>radhitya.my.id</b></p>
+			<p><i>a quite blog for silent war.</i></p>
+		</div>
+			<div class="pin"> 
+		{% include search.html %}
+	</div>
+
+	<div>
+		<h3>Kategori dan RSS</h3>
+  <ul>
+    {% for category in site.tags %}
+      <li><a href="{{ site.baseurl }}/tag/{{ category | first | slugify }}/">{{ category | first }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+</div>
