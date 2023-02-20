@@ -13,7 +13,7 @@
 		<h3>Kategori dan RSS</h3>
   <ul>
     {% for category in site.tags %}
-      <li><a href="{{ site.baseurl }}/tag/{{ category | first | slugify }}/">{{ category | first }}</a></li>
+      <li><a href="{{ site.baseurl }}/tag/{{ category | first | slugify }}.html">{{ category | first }}</a></li>
     {% endfor %}
   </ul>
 </div>
