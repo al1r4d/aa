@@ -21,6 +21,15 @@ section.meta a[href^="http"]::after, section.meta a[href^="https://"]::after {
   display: inline-block;
 }
 
+.perhatian {
+	line-height: 1.4rem;
+font-size: 1rem;
+padding: .15rem;
+border-top: 1px solid #606060;
+border-bottom: 1px solid #606060;
+background: rgba(0,0,0,0.1);
+position: relative;
+}
 .thumbnail {
 	max-width: 40%;
 	max-height: 40%;
@@ -204,12 +213,11 @@ box-sizing: border-box;
     text-align: center;
   }
   .site-nav li {
-    display: block;
-    margin: 0;
+    display: flex;
+    margin: 0 1em;
   }
   .site-nav li.submenu ul {
-    position: static;
-    display: none;
+    display: flex;
   }
   .site-nav li.submenu:hover ul {
     display: block;
