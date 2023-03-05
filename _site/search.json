@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Revolusi Tampilan",
+      "category" : "",
+      "tags"     : "cerita",
+	"url"      : "/ganti-tema",
+	"date"     : "2023-03-05 00:00:00 +0700"
+	
+    } ,
+  
+    {
       "title"    : "Satu Hari Tanpa Whatsapp",
       "category" : "",
       "tags"     : "teknologi",

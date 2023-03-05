@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,11 @@
 
 <div class="posts">
   
+    <h2><a href="/komentar-soal-rkuhp-bagian-zina">Komentar RKUHP Bagian Zina</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/.html"></a> pada 6 December 2022</p>
+    <p>Kali ini timeline Mastodon &amp; Twitter lagi ramai soal RKUHP terbaru. Jujur aja gw belum baca sampai selesai.
+</p>
+  
     <h2><a href="/menuju-snbt-23">Menuju SNBT 23</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 5 December 2022</p>
     <p>Habisini saya mau ujian SNBT 23. Kalau gak tau itu apa, SNBT 23 adalah pengganti SBMPTN alias ujian masuk berbasis tes. Alhamdulillah tidak ada pelajaran Kimia karena saya lemah di...</p>
@@ -46,10 +53,6 @@
     <h2><a href="/pemilihan-ketua-osis-smala">Pemilihan Ketua OSIS SMALA 2022</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/smala.html">smala</a> pada 10 November 2022</p>
     <p>Pihak sekolah mengadakan pemilihan ketua OSIS SMALA 2022/2023 secara tatap muka. Konsepnya sama seperti pemilihan presiden. Ada balkot, ada tusuk - tusukan, dan ada colek tinta. Poster Pemilu Anda dapat...</p>
-  
-    <h2><a href="/kilas-balik-oktober">Kilas Balik, Oktober 2022</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 2 November 2022</p>
-    <p>Mumpung bulan baru, saya mau kilas balik bulan lama Oktober. Udah kayak october dumps kayak di story - story instagram anak kekinian, lha. Pure Saturday Akhirnya saya dapat kaset Self...</p>
   
 </div>
 
@@ -130,6 +133,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page5/">Next →</a>
@@ -207,7 +214,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

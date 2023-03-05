@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,10 @@
 
 <div class="posts">
   
+    <h2><a href="/kontribusi">Kontribusi</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 21 September 2021</p>
+    <p>Hidup di sebuah lingkungan hebat tak jarang membuat terlena. Terlena tentang kebesaran, kebangaan, kehebatan, dan ke-lainnya. Tulisan ini tercipta selama saya hidup di lingkungan hebat itu, meskipun belum sepenuhnya lulus....</p>
+  
     <h2><a href="/forum-gen">Forum Gen</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 11 September 2021</p>
     <p>Catatan ini belum selesai, harap maklum kalau ndak jelas.
@@ -50,11 +56,6 @@
 Senapan menembus teman kami 
 Dikuliti musuh oleh pisau belati 
 Suara rintih bersamaan pekik 
-</p>
-  
-    <h2><a href="/permulaan">Realis</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 9 September 2021</p>
-    <p>Saya realis, artinya melihat hal nyata tanpa tambahan atau pengurangan.
 </p>
   
 </div>
@@ -136,9 +137,13 @@ Suara rintih bersamaan pekik
       
         <span class="page-number current">18</span>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
-      <span class="next">Next →</span>
+      <a class="next" href="/weblog/page19/">Next →</a>
     
   </div>
 
@@ -213,7 +218,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

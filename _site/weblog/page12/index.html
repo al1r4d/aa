@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,10 @@
 
 <div class="posts">
   
+    <h2><a href="/terblokir-dari-mastodon-social">Terblokir dari Mastodon Social</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 21 February 2022</p>
+    <p>Hari ini saya dapat email, bunyinya : Akun Anda telah ditangguhkan. Semua toot dan media yang Anda unggah dihapus secara permanen dari server ini, dan server tempat Anda memiliki pengikut....</p>
+  
     <h2><a href="/sjw-islam-s2">Tentang Islam S2 Pengguna Twitter</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 18 February 2022</p>
     <p>Di timeline twitter sedang ribut soal perempuan yang beropini tentang LGBT dalam Islam, puncaknya dia menyebut dirinya S2 Islam yang rancu. Sambil menghela napas, saya sedikit miris dengan masa depan....</p>
@@ -46,11 +52,6 @@
     <h2><a href="/membaca-buku">Buku dan Opini</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatanfeatured.html">catatanfeatured</a> pada 7 February 2022</p>
     <p>Catatan mikro ini diperuntukkan bagi mereka yang gemar membaca buku.
-</p>
-  
-    <h2><a href="/ketimpangan">Ketimpangan</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 6 February 2022</p>
-    <p>Ketimpangan bukan tentang harta, tetapi juga keahlian.
 </p>
   
 </div>
@@ -132,6 +133,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page13/">Next →</a>
@@ -209,7 +214,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

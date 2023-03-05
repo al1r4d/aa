@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,11 @@
 
 <div class="posts">
   
+    <h2><a href="/gagap-teknologi">Gagap Teknologi</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 7 December 2022</p>
+    <p>Orang sering memanggil saya sebagai orang yang ahli dalam teknologi. Berbagai pujian tentang itu saya terima. Namun, saya menilai diri saya adalah gagap teknologi.
+</p>
+  
     <h2><a href="/satu">Indonesia Really City Pop</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/kurasi.html">kurasi</a> pada 7 December 2022</p>
     <p>Eramono - Telephone Erni Sumarto - Dua Sehati Cici Sumiati - Sejam Lagi Tita Sisters - Kasih Bersemi Grace Simon - Diantara Mega-Mega Midnight Runners - Citra Abadi Tita Soemarsono...</p>
@@ -46,11 +53,6 @@
     <h2><a href="/komentar-bom-bunuh-diri-astana-anyar">Komentar Bom Bunuh Diri Astana Anyar</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/.html"></a> pada 7 December 2022</p>
     <p>Pagi - pagi dapat kabar ada bom bunuh diri di Astana Anyar, tepat 1 hari setelah pengesahan rkuhp kolonial terbaru.
-</p>
-  
-    <h2><a href="/komentar-soal-rkuhp-bagian-zina">Komentar RKUHP Bagian Zina</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/.html"></a> pada 6 December 2022</p>
-    <p>Kali ini timeline Mastodon &amp; Twitter lagi ramai soal RKUHP terbaru. Jujur aja gw belum baca sampai selesai.
 </p>
   
 </div>
@@ -132,6 +134,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page4/">Next →</a>
@@ -209,7 +215,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

@@ -1,0 +1,22 @@
+<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
+
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+

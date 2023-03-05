@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,10 @@
 
 <div class="posts">
   
+    <h2><a href="/minimal">Minimal</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 9 May 2022</p>
+    <p>Berhenti membeli yang tidak perlu. Kurangi setengah barang Anda, pelajari kepuasan. Kurangi setengah lagi. Sebutkan 4 hal penting dalam hidup Anda, lakukan itu terlebih dahulu, berhenti melakukan hal yang tidak...</p>
+  
     <h2><a href="/kenapa-demo">Kenapa Demonstrasi?</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 14 April 2022</p>
     <p>Karena sekarang sedang lagi musim demo mahasiswa, teman saya bertanya tentang alasan mahasiswa lebih memilih demo. Kalau dipikir - pikir opininya bersifat sinis, seakan - akan demo itu tidak penting....</p>
@@ -47,11 +53,6 @@
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/smala.html">smala</a> pada 10 April 2022</p>
     <p>
 Hari pertama S2LC 2022 cukup melelahkan bagi saya. Mengelola dan mengatur jalannya olimpiade. Tetapi tidak apa - apa, ini adalah pengalaman baru dan berharga.
-</p>
-  
-    <h2><a href="/drm">DRM dalam Hiburan</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 27 March 2022</p>
-    <p>Sekarang sangatlah mudah untuk mengakses hiburan karena kemajuan teknologi. Kalau mau mendengarkan lagu atau menonton film, tidak perlu repot - repot memasukkan CD.
 </p>
   
 </div>
@@ -133,6 +134,10 @@ Hari pertama S2LC 2022 cukup melelahkan bagi saya. Mengelola dan mengatur jalann
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page10/">Next →</a>
@@ -210,7 +215,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

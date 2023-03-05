@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,11 @@
 
 <div class="posts">
   
+    <h2><a href="/drm">DRM dalam Hiburan</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 27 March 2022</p>
+    <p>Sekarang sangatlah mudah untuk mengakses hiburan karena kemajuan teknologi. Kalau mau mendengarkan lagu atau menonton film, tidak perlu repot - repot memasukkan CD.
+</p>
+  
     <h2><a href="/opini-dan-keadaan-setelahnya">Opini dan Keadaan Setelahnya</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 13 March 2022</p>
     <p>Beribu - ribu opini telah tertulis, apakah Indonesia berubah menjadi lebih baik setelahnya? Sayang sekali jawabannya tidak. Lalu jika beropini saja tidak merubah, apakah mending tidak usah beropini? Jawabannya juga...</p>
@@ -47,12 +54,6 @@
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/smala.html">smala</a> pada 5 March 2022</p>
     <p>
 Seseorang datang dan pergi. Itulah gambaran angkatan 22 Smalane sekarang. Akhirnya mereka berada di titik kelulusan.
-</p>
-  
-    <h2><a href="/server-rumah">Server Rumah</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 2 March 2022</p>
-    <p>Membangun server di rumah sangat mengasyikkan. Anda harus mencobanya juga.
-
 </p>
   
 </div>
@@ -134,6 +135,10 @@ Seseorang datang dan pergi. Itulah gambaran angkatan 22 Smalane sekarang. Akhirn
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page11/">Next →</a>
@@ -211,7 +216,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

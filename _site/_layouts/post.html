@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -82,6 +84,10 @@
 
 
     </article>
+	<hr>
+	<h2>📣 Berikan Komentarmu</h2>
+	<p>Jika Anda ingin meninggalkan umpan balik, silakan lakukan dengan mengirimkan saya pesan melalui <a href="mailto:al1r4d@riseup.net?subject=">email</a>.</p>
+
     <div class="perhatian">
 	    <h2>🚀 Berlangganan</h2>
 	    <p>Jika Anda ingin membaca lebih banyak posting seperti ini, maka Anda dapat <a href="/tag/.html">berlangganan melalui RSS</a>.</p>
@@ -94,6 +100,10 @@
 
 
     </article>
+	<hr>
+	<h2>📣 Berikan Komentarmu</h2>
+	<p>Jika Anda ingin meninggalkan umpan balik, silakan lakukan dengan mengirimkan saya pesan melalui <a href="mailto:al1r4d@riseup.net?subject=">email</a>.</p>
+
     <div class="perhatian">
 	    <h2>🚀 Berlangganan</h2>
 	    <p>Jika Anda ingin membaca lebih banyak posting seperti ini, maka Anda dapat <a href="/tag/.html">berlangganan melalui RSS</a>.</p>
@@ -168,7 +178,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

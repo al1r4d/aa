@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,11 @@
 
 <div class="posts">
   
+    <h2><a href="/jangan-membeli-perangkat-terbaru">Jangan Membeli Perangkat Terbaru</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatanteknologi.html">catatanteknologi</a> pada 3 July 2022</p>
+    <p>Perangkat sekarang mulai canggih dengan fitur - fiturnya. Sebagian orang tergiur, sehingga membelinya. Bagian buruknya, orang menjadi boros, sehingga menumpuk banyak perangkat.
+</p>
+  
     <h2><a href="/perihal-media-sosial">Perihal Fediverse</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 29 June 2022</p>
     <p>Saya dan Fediverse
@@ -52,10 +59,6 @@ radhitya.my.id atau alif.radhitya.my.id (blog)
 
 Kalau anda menandai salah satu postingan saya, harap diganti website yang terbaru.
 </p>
-  
-    <h2><a href="/minimal">Minimal</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 9 May 2022</p>
-    <p>Berhenti membeli yang tidak perlu. Kurangi setengah barang Anda, pelajari kepuasan. Kurangi setengah lagi. Sebutkan 4 hal penting dalam hidup Anda, lakukan itu terlebih dahulu, berhenti melakukan hal yang tidak...</p>
   
 </div>
 
@@ -136,6 +139,10 @@ Kalau anda menandai salah satu postingan saya, harap diganti website yang terbar
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page9/">Next →</a>
@@ -213,7 +220,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

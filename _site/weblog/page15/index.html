@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,10 @@
 
 <div class="posts">
   
+    <h2><a href="/temu-gen-angels-2021">Temu Gen Angels 2021</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/smala.html">smala</a> pada 19 December 2021</p>
+    <p>Alhamdulillah kami berhasil melaksanakan acara Temu Gen Angels 2021 yang diselenggarakan oleh Angels 24. Meskipun yang datang masih sedikit, mungkin karena kesibukan masing - masing. Persiapan Awalnya saya dan Angels...</p>
+  
     <h2><a href="/blog-minimalis">Blog dan Minimalisme</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologicatatan.html">teknologicatatan</a> pada 18 December 2021</p>
     <p>Kita hidup dimana website menjadi kembung atau bloat. Ketika mengakses, mungkin saja perangkat keras kita menjadi panas karena website berisi bermacam - macam skrip dan gambar. Saya tidak menyukai itu...</p>
@@ -47,11 +53,6 @@
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/ceritasmala.html">ceritasmala</a> pada 4 December 2021</p>
     <p>
 3 Desember 2021 di Pucang, Surabaya
-</p>
-  
-    <h2><a href="/satu-tahun-di-smala">Satu Tahun Di Smala</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 27 November 2021</p>
-    <p>Tidak terasa sudah satu tahun saya menjadi Smalane. Rasanya baru kemarin saya diterima di sekolah ini.
 </p>
   
 </div>
@@ -133,6 +134,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page16/">Next →</a>
@@ -210,7 +215,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

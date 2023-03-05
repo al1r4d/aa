@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,12 @@
 
 <div class="posts">
   
+    <h2><a href="/server-rumah">Server Rumah</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 2 March 2022</p>
+    <p>Membangun server di rumah sangat mengasyikkan. Anda harus mencobanya juga.
+
+</p>
+  
     <h2><a href="/selamat-tinggal-wordpress">Selamat Tinggal, Wordpress!</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 28 February 2022</p>
     <p>In 2020, I’m not using Wordpress again for my website. I switched to Jekyll, a static and simple blog platform. Jadi saya ucapkan : Selamat tinggal, Wordpress!
@@ -49,10 +57,6 @@
     <p>
 Guru - guru bersiap untuk berfoto
 </p>
-  
-    <h2><a href="/terblokir-dari-mastodon-social">Terblokir dari Mastodon Social</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 21 February 2022</p>
-    <p>Hari ini saya dapat email, bunyinya : Akun Anda telah ditangguhkan. Semua toot dan media yang Anda unggah dihapus secara permanen dari server ini, dan server tempat Anda memiliki pengikut....</p>
   
 </div>
 
@@ -133,6 +137,10 @@ Guru - guru bersiap untuk berfoto
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page12/">Next →</a>
@@ -210,7 +218,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

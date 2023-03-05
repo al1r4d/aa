@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,15 @@
 
 <div class="posts">
   
+    <h2><a href="/selamat-tahun-baru-2023">Selamat Tahun Baru 2023</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 28 December 2022</p>
+    <p>
+  sebelum mata pena berkarat menolak kembali terisi
+sebelum semua paru disesaki tragedi
+dan pengulangan menemukan maknanya sendiri
+
+</p>
+  
     <h2><a href="/trawas-mipa-2">Trawas MIPA 2'23</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/smala.html">smala</a> pada 23 December 2022</p>
     <p>Kami memutuskan berlibur bersama selama 1 malam 2 hari (21 Desember 2022 - 22 Desember 2022) di Trawas. Menginap di Villa milik Nadya (Angels 23). Sebelum ke Villa, kami mainan...</p>
@@ -46,11 +57,6 @@
     <h2><a href="/pertemanan-dan-ideologi">Pertemanan dan Ideologi</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 18 December 2022</p>
     <p>Saya hidup berpegang teguh Al Quran dan ideologi saya. Sebagian orang menganggap saya radikal. Sikap saya tentang para bigot liberal dan setan kiri keras sekali. Tak jarang saya dijauhi atau...</p>
-  
-    <h2><a href="/gagap-teknologi">Gagap Teknologi</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/teknologi.html">teknologi</a> pada 7 December 2022</p>
-    <p>Orang sering memanggil saya sebagai orang yang ahli dalam teknologi. Berbagai pujian tentang itu saya terima. Namun, saya menilai diri saya adalah gagap teknologi.
-</p>
   
 </div>
 
@@ -131,6 +137,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page3/">Next →</a>
@@ -208,7 +218,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         

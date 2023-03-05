@@ -3,11 +3,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Alif Radhitya"/>
-<meta name="description" content="A quite blog for silent war">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+<meta name="description" content="A quite blog for silent war"/>
 <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <title>Alif Radhitya - </title>
+
+    <title>Alif Radhitya</title>
 
 
 
@@ -39,6 +41,11 @@
 
 <div class="posts">
   
+    <h2><a href="/satu-tahun-di-smala">Satu Tahun Di Smala</a></h2>
+    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/cerita.html">cerita</a> pada 27 November 2021</p>
+    <p>Tidak terasa sudah satu tahun saya menjadi Smalane. Rasanya baru kemarin saya diterima di sekolah ini.
+</p>
+  
     <h2><a href="/bagaimana-cara-saya-menggunakan-laptop">Saya dan Laptop</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 13 November 2021</p>
     <p>Catatan ini terinspirasi oleh Richard Stallman dalam postingan “How do I computing?”. Jika pembaca penasaran dengan kegiatan saya dengan laptop, catatan ini akan menjawab.
@@ -47,11 +54,6 @@
     <h2><a href="/generasi-nunduk">Generasi Nunduk</a></h2>
     <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/draf.html">draf</a> pada 28 October 2021</p>
     <p>Sekali lagi saya tegaskan bahwa tidak punya maksud lain. Mungkin memang saya yang berlebihan atau beneran salah.
-</p>
-  
-    <h2><a href="/apatisme-egoisme">Apatisme</a></h2>
-    <p style="background:rgba(0,0,0,0.1);">Diarsipkan di <a href="/tag/catatan.html">catatan</a> pada 25 October 2021</p>
-    <p>Saya tidak mengerti apakah standar saya ketinggian atau memang mereka yang salah. barangkali permasalahan ini memang harus dibicarakan demi keberlangsungan.
 </p>
   
 </div>
@@ -133,6 +135,10 @@
       
         <a class="page-number" href="/weblog/page18">18</a>
       
+      
+      
+        <a class="page-number" href="/weblog/page19">19</a>
+      
        --!>
     
       <a class="next" href="/weblog/page17/">Next →</a>
@@ -210,7 +216,32 @@ SimpleJekyllSearch({
     
   </ul>
 </div>
+<div>
+	<h3>Kutipan</h3>
+	<div id="quote-container">
+  <p id="quote"></p>
+  <p id="author"></p>
+</div>
+<script>
+  fetch('/assets/json/quotes.json')
+    .then(response => response.json())
+    .then(data => {
+      const quoteContainer = document.getElementById('quote-container');
+      const quote = document.getElementById('quote');
+      const author = document.getElementById('author');
 
+      const randomQuote = data[Math.floor(Math.random() * data.length)];
+
+      quote.innerHTML = randomQuote.quote;
+      author.innerHTML = randomQuote.author;
+
+      quoteContainer.style.display = 'block';
+    })
+    .catch(error => console.error(error));
+</script>
+
+
+</div>
 </div>
 
         
