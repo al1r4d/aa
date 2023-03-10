@@ -153,7 +153,7 @@ img {
 }
 
 .left { float: left; }
-.right { float: right; margin-left: 10px; }
+.right { float: right; }
 
 @media only screen and (max-width: 768px) {
 

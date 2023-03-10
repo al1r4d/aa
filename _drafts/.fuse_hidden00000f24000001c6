@@ -1,0 +1,20 @@
+---
+title: Mini PC dan Smala UPS
+layout: post
+tag: 
+- cerita
+- smala
+---
+
+Belasan pesan saya terima di Instagram karena Pak Dodiek, guru Sejarah di SMAN 5 Surabaya yang mengunggah cerita (_story_) saya membawa _mini pc_ ketika UPS. Banyak reaksi yang beragam, ada kaget dan tertawa.
+
+Sebagian orang bertanya, "mengapa saya memilih cara ribet dengan membawa mini pc beserta layar monitor daripada laptop?"
+
+Jawaban singkat: Exam Browser tidak mendukung FreeBSD dan Linux yang terpasang di laptop saya.
+
+Mungkin orang akan menyoal lebih jauh, "Kan bisa pasang Windows di laptop."
+
+Sayangnya, jawabannya panjang sekali.
+
+## Saya dan Gerakan Sumber Terbuka
+Saya adalah orang yang mencintai program sumber terbuka dan mengutamakannya dibanding _proprietary_. Setiap hari saya menggunakan Linux ditemani aplikasi _free software_, termasuk situs ini yang dikembangkan dengan Jekyll, program _open source static site generator._ Perangkat seluler, POCO M4 Pro 4G, sudah saya buka _bootloader_ demi memasang _custom rom_.
